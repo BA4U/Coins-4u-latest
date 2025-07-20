@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".chat.SettingsActivity">
+
+    <include
+        android:id="@+id/settings_toolbar"
+        layout="@layout/app_bar_layout"/>
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/set_profile_image"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp"
+        android:src="@drawable/user_icon_default"
+        app:civ_border_width="5dp"
+        app:civ_border_color="@color/colorPrimary"/>
+
+    <EditText
+        android:id="@+id/set_user_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/set_profile_image"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/story_description_background"
+        android:fontFamily="@font/roboto_bold"
+        android:hint="@string/bg4u_user"
+        android:inputType="textMultiLine"
+        android:minHeight="48dp"
+        android:paddingHorizontal="30dp"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimaryDark"
+        android:textStyle="bold">
+
+    </EditText>
+
+    <EditText
+        android:id="@+id/set_profile_status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/set_user_name"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/story_description_background"
+        android:fontFamily="@font/roboto_medium"
+        android:hint="@string/bio"
+        android:inputType="textMultiLine"
+        android:maxLines="2"
+        android:minHeight="48dp"
+        android:padding="15dp"
+        android:paddingHorizontal="30dp"
+        android:text="@string/jitna_sukh_utna_dukh_jo_aaj_hai_wo_kal_nahi_smile_with_anuj"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:textStyle="bold|italic">
+
+    </EditText>
+    <Button
+        android:id="@+id/update_settings_button"
+        android:layout_below="@id/set_profile_status"
+        android:text="Update"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/background_light"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:textAllCaps="false"
+        android:background="@drawable/button_2"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:padding="6dp">
+
+    </Button>
+</RelativeLayout>

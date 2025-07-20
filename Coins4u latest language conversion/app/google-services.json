@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "474500944770",
+    "firebase_url": "https://coins--4u-default-rtdb.firebaseio.com",
+    "project_id": "coins--4u",
+    "storage_bucket": "coins--4u.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:474500944770:android:eeed1bcf9ee069d2c2759b",
+        "android_client_info": {
+          "package_name": "com.bg4u.coins4u"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "474500944770-ljivuhgaplkq2mjje0603kq530ho3uji.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCAfF6R5msl1Enq7BkYGcIuMgxS6PHw1Fw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "474500944770-ljivuhgaplkq2mjje0603kq530ho3uji.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_grey"
+    tools:context="com.bg4u.coins4u.MainActivity">
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/addFloatBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="40dp"
+        android:backgroundTint="@color/colorPurple"
+        android:contentDescription="@string/chat"
+        android:elevation="6dp"
+        android:src="@android:drawable/stat_notify_chat"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="wrap_content"
+        android:layout_height="75dp"
+        android:background="@drawable/background_bottom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/view3"
+        android:layout_width="0dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:maxWidth="360dp"
+        android:minWidth="260dp"
+        android:minHeight="150dp"
+        app:cardCornerRadius="23dp"
+        app:cardElevation="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/view2">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/rounded_box" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/border_gray"
+            android:elevation="5dp" />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/animationViewBanner"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:scaleType="centerCrop"
+            android:visibility="invisible"
+            app:layout_constraintCircleRadius="20dp"
+            app:lottie_autoPlay="true"
+            app:lottie_enableMergePathsForKitKatAndAbove="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/winner_banner_animation" />
+
+    </androidx.cardview.widget.CardView>
+
+    <!-- User Name -->
+    <TextView
+        android:id="@+id/hi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/roboto_medium"
+        android:padding="2dp"
+        android:text="@string/hello"
+        android:textColor="@color/yellow"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/userImage"
+        app:layout_constraintStart_toStartOf="@id/view3"
+        app:layout_constraintTop_toTopOf="@+id/view3" />
+    <!-- User Name -->
+    <TextView
+        android:id="@+id/username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:fontFamily="@font/roboto_medium"
+        android:padding="2dp"
+        android:text="@string/coins_4u_user"
+        android:textColor="@color/color_white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/hi"
+        app:layout_constraintStart_toEndOf="@id/hi"
+        app:layout_constraintTop_toTopOf="@id/hi" />
+
+    <!-- Premium Icon -->
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/premiumIconHome"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toBottomOf="@+id/username"
+        app:layout_constraintStart_toEndOf="@id/username"
+        app:layout_constraintTop_toTopOf="@id/username"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/premium_gold_icon" />
+
+    <!-- User Profile Image -->
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/userImage"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_marginTop="1dp"
+        android:contentDescription="@string/quiz_icon"
+        android:maxHeight="120dp"
+        android:paddingTop="5dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/user_icon_default"
+        app:civ_border_color="@color/white"
+        app:civ_border_width="4dp"
+        app:layout_constraintBottom_toBottomOf="@+id/instruction_layout"
+        app:layout_constraintStart_toStartOf="@+id/hi"
+        app:layout_constraintTop_toTopOf="@+id/instruction_layout" />
+
+
+    <LinearLayout
+        android:id="@+id/instruction_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="15dp"
+        android:maxHeight="160dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="@id/view3"
+        app:layout_constraintEnd_toEndOf="@id/view3"
+        app:layout_constraintTop_toBottomOf="@+id/username">
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_bold"
+            android:shadowColor="@color/shadow_color"
+            android:text="@string/instructions"
+            android:textColor="@color/yellow"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/instruction_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_medium"
+            android:text="@string/play_quiz_or_game"
+            android:textColor="@color/color_white"
+            android:textSize="10sp"
+            app:layout_constraintStart_toStartOf="@+id/textView4"
+            app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_medium"
+            android:text="@string/choose_category"
+            android:textColor="@color/color_white"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_medium"
+            android:text="@string/spin_wheel_instruction"
+            android:textColor="@color/color_white"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_medium"
+            android:text="@string/collect_coins"
+            android:textColor="@color/color_white"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_medium"
+            android:text="@string/earn_reward"
+            android:textColor="@color/color_white"
+            android:textSize="10sp" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view3">
+
+        <LinearLayout
+            android:id="@+id/linearScrollLayout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view3">
+
+
+            <LinearLayout
+                android:id="@+id/linearLayout1"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginStart="40dp"
+                android:layout_marginEnd="40dp"
+                android:maxWidth="360dp"
+                android:minWidth="260dp"
+                android:minHeight="150dp"
+                android:orientation="horizontal"
+                android:padding="2dp">
+
+                <TextView
+                    android:id="@+id/spinwheel"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_1"
+                    android:fontFamily="@font/roboto_medium"
+                    android:gravity="center"
+                    android:paddingVertical="10dp"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="5dp"
+                    android:text="@string/spin_wheel"
+                    android:textColor="@color/color_white"
+                    android:textSize="15sp"
+                    app:drawableStartCompat="@drawable/spin"
+                    tools:ignore="RtlSymmetry" />
+
+                <TextView
+                    android:id="@+id/tictacgame"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_2"
+                    android:fontFamily="@font/roboto_medium"
+                    android:gravity="center"
+                    android:paddingVertical="10dp"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="5dp"
+                    android:text="@string/tic_tac_toe"
+                    android:textColor="@color/color_white"
+                    android:textSize="15sp"
+                    app:drawableStartCompat="@drawable/tictac_resized"
+                    tools:ignore="RtlSymmetry" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/freefire"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/button_4"
+                android:fontFamily="@font/roboto_bold"
+                android:gravity="center"
+                android:paddingVertical="10dp"
+                android:paddingStart="15dp"
+                android:paddingEnd="40dp"
+                android:text="Free Fire Custom Room"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:drawableStartCompat="@android:drawable/ic_menu_myplaces"
+                tools:ignore="RtlSymmetry"
+                app:layout_constraintBottom_toTopOf="@+id/categoryList"
+                app:layout_constraintEnd_toEndOf="@id/tictacgame"
+                app:layout_constraintStart_toStartOf="@id/spinwheel"
+                app:layout_constraintTop_toBottomOf="@+id/promotionList"
+                />
+
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/premiumAnimationBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:layout_marginBottom="2dp"
+                android:elevation="10dp"
+                android:gravity="fill_horizontal"
+                android:contentDescription="@string/buy_subscription"
+                android:minHeight="150dp"
+                app:layout_constraintBottom_toTopOf="@+id/categoryList"
+                app:layout_constraintEnd_toEndOf="@id/tictacgame"
+                app:layout_constraintStart_toStartOf="@id/spinwheel"
+                app:layout_constraintTop_toBottomOf="@+id/promotionList"
+                app:lottie_autoPlay="true"
+                app:lottie_enableMergePathsForKitKatAndAbove="true"
+                app:lottie_loop="true"
+                android:visibility="gone"
+                app:lottie_rawRes="@raw/go_premium" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/promotionList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="4dp"
+                android:layout_marginBottom="2dp"
+                android:keepScreenOn="true"
+                tools:listitem="@layout/item_promotion"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearScrollLayout" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/categoryList"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="4dp"
+                tools:listitem="@layout/item_category"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/promotionList" />
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <View
+        android:id="@+id/view4"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/background_bottom"
+        android:minHeight="80dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/timer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawablePadding="5dp"
+        android:fontFamily="@font/roboto_bold"
+        android:padding="10dp"
+        android:text="24"
+        android:textColor="@color/RED"
+        android:textSize="22sp"
+        app:drawableStartCompat="@drawable/ic_timer"
+        app:layout_constraintBottom_toBottomOf="@+id/view4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/quizTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_bold"
+        android:text="@string/quiz_title"
+        android:textColor="@color/green"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:singleLine="true"
+        android:maxLines="1"
+        app:layout_constraintBottom_toBottomOf="@+id/view4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/questionCounter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawablePadding="10dp"
+        android:fontFamily="@font/roboto_bold"
+        android:padding="10dp"
+        android:text="1/10"
+        android:textColor="@color/color_white"
+        android:textSize="22sp"
+        app:drawableRightCompat="@drawable/ic_question"
+        app:drawableTint="@color/yellow"
+        app:layout_constraintBottom_toBottomOf="@+id/view4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="2dp"
+        app:layout_constraintBottom_toTopOf="@id/adView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view4"
+        app:layout_constraintVertical_bias="0.5">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp"
+            android:paddingBottom="20dp"
+            app:layout_constraintBottom_toTopOf="@id/adView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:context="com.bg4u.coins4u.QuizActivity">
+
+            <TextView
+                android:id="@+id/question"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/promotion_btn"
+                android:fontFamily="@font/roboto_bold"
+                android:gravity="center"
+                android:minHeight="120dp"
+                android:padding="15dp"
+                android:scrollbars="vertical"
+                android:text="What is the name of this App made by Anuj?"
+                android:textColor="@color/color_white"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/quizImageView"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:contentDescription="TODO"
+                android:elevation="5dp"
+                app:layout_constraintBottom_toTopOf="@+id/questionImage"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/question"
+                app:srcCompat="@drawable/quiz_three_d" />
+
+            <View
+                android:id="@+id/winCoinView"
+                android:layout_width="60dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="5dp"
+                android:background="@drawable/btn_rounded_corner"
+                android:backgroundTint="@color/black"
+                android:elevation="2dp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toTopOf="@+id/questionImage"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/question" />
+
+            <LinearLayout
+                android:id="@+id/linearLayoutWinCoin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_marginBottom="8dp"
+                android:elevation="2dp"
+                android:visibility="gone"
+                android:gravity="center"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="@+id/winCoinView"
+                app:layout_constraintEnd_toEndOf="@+id/winCoinView"
+                app:layout_constraintStart_toStartOf="@+id/winCoinView"
+                app:layout_constraintTop_toTopOf="@+id/winCoinView"
+                tools:ignore="UseCompoundDrawables">
+
+                <TextView
+                    android:id="@+id/catWinCoins"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1"
+                    android:textColor="@color/green"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="4dp"
+                    android:contentDescription="@string/current_coins"
+                    android:src="@drawable/coinlogowithtext_4u" />
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lostCoinView"
+                android:layout_width="60dp"
+                android:layout_height="40dp"
+                android:elevation="2dp"
+                android:visibility="gone"
+                android:layout_marginEnd="5dp"
+                app:layout_constraintBottom_toTopOf="@+id/questionImage"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/question"
+                android:backgroundTint="@color/black"
+                android:background="@drawable/btn_rounded_corner" />
+
+            <LinearLayout
+                android:id="@+id/linearLayoutLostCoin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_marginBottom="8dp"
+                android:elevation="2dp"
+                android:visibility="gone"
+                android:gravity="center"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="@+id/lostCoinView"
+                app:layout_constraintEnd_toEndOf="@+id/lostCoinView"
+                app:layout_constraintStart_toStartOf="@+id/lostCoinView"
+                app:layout_constraintTop_toTopOf="@+id/lostCoinView"
+                tools:ignore="UseCompoundDrawables">
+
+                <TextView
+                    android:id="@+id/catLostCoins"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1"
+                    android:textColor="@color/RED"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="4dp"
+                    android:contentDescription="@string/current_coins"
+                    android:src="@drawable/coinlogowithtext_4u" />
+
+            </LinearLayout>
+            <ImageView
+                android:id="@+id/questionImage"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintDimensionRatio="16:9"
+                android:contentDescription="@string/question_image"
+                android:scaleType="center"
+                app:layout_constraintEnd_toEndOf="@+id/question"
+                app:layout_constraintStart_toStartOf="@id/question"
+                app:layout_constraintTop_toBottomOf="@+id/question" />
+
+            <TextView
+                android:id="@+id/option_1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/option_unselected"
+                android:clickable="true"
+                android:focusable="true"
+                android:fontFamily="@font/roboto_bold"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:padding="15dp"
+                android:text="COIN 4U"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/question"
+                app:layout_constraintStart_toStartOf="@+id/question"
+                app:layout_constraintTop_toBottomOf="@+id/questionImage" />
+
+            <TextView
+                android:id="@+id/option_2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/option_unselected"
+                android:clickable="true"
+                android:focusable="true"
+                android:fontFamily="@font/roboto_bold"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:padding="15dp"
+                android:text="Coins 4u"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/option_1"
+                app:layout_constraintStart_toStartOf="@+id/option_1"
+                app:layout_constraintTop_toBottomOf="@+id/option_1" />
+
+            <TextView
+                android:id="@+id/option_3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/option_unselected"
+                android:clickable="true"
+                android:focusable="true"
+                android:fontFamily="@font/roboto_bold"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:padding="15dp"
+                android:text="Coins For You"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/option_2"
+                app:layout_constraintStart_toStartOf="@+id/option_2"
+                app:layout_constraintTop_toBottomOf="@+id/option_2" />
+
+            <TextView
+                android:id="@+id/option_4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/option_unselected"
+                android:clickable="true"
+                android:focusable="true"
+                android:fontFamily="@font/roboto_bold"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:padding="15dp"
+                android:text="Coins 4 You"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/option_3"
+                app:layout_constraintStart_toStartOf="@+id/option_3"
+                app:layout_constraintTop_toBottomOf="@+id/option_3" />
+
+            <Button
+                android:id="@+id/nextBtn"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="32dp"
+                android:background="@drawable/button_2"
+                android:clickable="true"
+                android:focusable="true"
+                android:maxWidth="160dp"
+                android:onClick="onClick"
+                android:text="@string/next"
+                android:textColor="@color/color_white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/quitBtn"
+                app:layout_constraintTop_toBottomOf="@+id/option_4" />
+
+            <Button
+                android:id="@+id/quitBtn"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/button_1"
+                android:clickable="true"
+                android:focusable="true"
+                android:maxWidth="160dp"
+                android:text="@string/quit"
+                android:textColor="@color/color_white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/nextBtn"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/option_4" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:adSize="BANNER"
+        app:adUnitId="@string/BANNER_AD_UNIT_ID"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/search_user_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/search_username_input"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/btn_rounded_corner"
+            android:elevation="4dp"
+            android:fontFamily="@font/roboto_bold"
+            android:hint="Search user"
+            android:inputType="textPersonName"
+            android:paddingStart="20dp"
+            android:paddingHorizontal="5dp" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/search_user_btn"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/circle_blue"
+            android:foreground="?android:selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:contentDescription="@string/bg4u_user"
+            android:elevation="4dp"
+            android:focusable="true"
+            android:padding="10dp"
+            android:src="@drawable/icon_search"
+            app:tint="@color/colorWhite" />
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/find_friends_recyclerlist"
+        android:layout_below="@id/search_user_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        tools:listitem="@layout/users_display_layout"/>
+
+    <!--
+        <com.google.android.gms.ads.AdView
+            android:id="@+id/adView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/find_friends_recyclerlist"
+            app:adSize="BANNER"
+            app:adUnitId="@string/BANNER_AD_UNIT_ID"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+        -->
+</RelativeLayout>

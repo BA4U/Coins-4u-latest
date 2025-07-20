@@ -1,0 +1,120 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.google.gms.google-services'
+apply plugin: 'com.google.firebase.crashlytics'
+
+android {
+    compileSdk 35
+
+    buildFeatures {
+        buildConfig true
+        viewBinding true
+    }
+
+    defaultConfig {
+        applicationId "com.bg4u.coins4u"
+        minSdkVersion 24
+        //noinspection EditedTargetSdkVersion
+        targetSdkVersion 35
+        versionCode 28
+        versionName "2024.10.15"
+        multiDexEnabled true
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        buildConfigField "String", "RAZORPAY_KEY", "\"rzp_live_uKNNoFARuXPBva\""
+    }
+
+    bundle {
+        language {
+            enableSplit = false
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    namespace 'com.bg4u.coins4u'
+}
+
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation 'androidx.appcompat:appcompat:1.7.0'
+    implementation 'androidx.core:core-ktx:1.15.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.2.0'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'androidx.recyclerview:recyclerview:1.4.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.viewpager2:viewpager2:1.1.0'
+    implementation 'com.google.android.material:material:1.12.0'
+
+
+//    For users data safety policy
+//    implementation 'com.github.mukeshsolanki.android-otpview-pinview:otpview:3.1.0'
+//    implementation 'com.googlecode.libphonenumber:libphonenumber:8.13.16'
+
+    // FirebaseUI for Firebase Realtime Database
+    implementation 'com.firebaseui:firebase-ui-database:8.0.2'
+    implementation 'com.google.firebase:firebase-auth:23.2.0'
+    implementation 'com.google.firebase:firebase-storage:21.0.1'
+    implementation 'com.google.firebase:firebase-database:21.0.0'
+    implementation 'com.google.firebase:firebase-messaging:24.1.0'
+    implementation 'com.google.firebase:firebase-dynamic-links:22.1.0'
+    implementation 'com.google.firebase:firebase-crashlytics:19.4.0'
+    implementation 'com.google.firebase:firebase-inappmessaging-display:21.0.1'
+    implementation 'com.google.firebase:firebase-config:22.1.0'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.2.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.6.1'
+    implementation 'com.github.ibrahimsn98:SmoothBottomBar:1.7.6'
+    implementation 'com.github.bumptech.glide:glide:4.15.1'
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+    implementation 'com.squareup.picasso:picasso:2.71828'
+    // Remove the following lines
+    // implementation 'com.android.support:support-compat:27.1.0'
+    // implementation 'com.android.support:appcompat-v7:27.1.0'
+
+    implementation 'com.hbb20:ccp:2.7.0'
+
+    // Import the BoM for the Firebase platform
+    implementation platform('com.google.firebase:firebase-bom:33.9.0')
+    implementation 'com.google.firebase:firebase-analytics'
+    implementation 'com.google.android.gms:play-services-auth:21.3.0'
+    implementation 'com.google.android.gms:play-services-ads:23.6.0'
+    implementation 'com.google.firebase:firebase-firestore'
+
+    // Add the dependencies for the App Check libraries
+     implementation 'com.google.android.play:integrity:1.4.0'
+
+    implementation 'com.airbnb.android:lottie:6.1.0'
+
+    implementation 'com.github.pgreze:android-reactions:1.6'
+    implementation 'io.github.amrdeveloper:reactbutton:2.1.0'
+    implementation 'com.github.3llomi:CircularStatusView:V1.0.3'
+    implementation 'com.github.OMARIHAMZA:StoryView:1.0.2-alpha'
+
+    implementation 'com.github.amrdeveloper:lottiedialog:1.0.0'
+
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.15.1'
+
+    implementation("com.squareup.okhttp3:okhttp:4.10.0")
+
+    implementation 'com.jsibbold:zoomage:1.3.1'
+
+    // Use the latest in app billing version
+    // implementation 'com.android.billingclient:billing:6.0.1'
+
+    // implementation 'com.github.moisoni97:google-inapp-billing:1.1.3'
+
+    // One signal Implementation code
+    implementation 'com.onesignal:OneSignal:[5.1.7]'
+
+    implementation 'dev.shreyaspatil.EasyUpiPayment:EasyUpiPayment:3.0.3'
+
+    implementation 'com.razorpay:checkout:1.6.41'
+}

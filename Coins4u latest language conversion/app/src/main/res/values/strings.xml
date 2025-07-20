@@ -1,0 +1,262 @@
+<resources>
+
+    <!-- Test ID  :   -->
+    <string name="ADMOB_APP_ID" translatable="false">ca-app-pub-9194745865715560~1044336356</string>
+
+    <!-- Test Banner ID  : ca-app-pub-3940256099942544/6300978111 -->
+    <string name="BANNER_AD_UNIT_ID" translatable="false">ca-app-pub-9194745865715560/2496275902</string>
+
+    <!-- Test Reward ID  : /6499/example/rewarded-video -->
+    <string name="SPINNER_REWARDED_AD_UNIT_ID" translatable="false">ca-app-pub-9194745865715560/7881879231</string>
+    <string name="EASY_REWARDED_AD_UNIT_ID" translatable="false">ca-app-pub-9194745865715560/5788476042</string>
+    <string name="MEDIUM_REWARDED_AD_UNIT_ID" translatable="false">ca-app-pub-9194745865715560/9792413628</string>
+    <string name="HARD_REWARDED_AD_UNIT_ID" translatable="false">ca-app-pub-9194745865715560/9466423649</string>
+    <string name="QUIZ_REWARDED_AD_UNIT_ID" translatable="false">ca-app-pub-9194745865715560/7347333248</string>
+
+    <!-- Test INTERSTITIAL_VIDEO_AD_UNIT_ID  : ca-app-pub-3940256099942544/8691691433 -->
+    <string name="INTERSTITIAL_VIDEO_AD_UNIT_ID" translatable="false">ca-app-pub-9194745865715560/5341931092</string>
+
+    <!-- Test INTERSTITIAL_AD_UNIT_ID  : ca-app-pub-3940256099942544/1033173712 -->
+    <string name="INTERSTITIAL_AD_UNIT_ID" translatable="false">ca-app-pub-9194745865715560/5341931092</string>
+
+    <!-- Test NATIVE_AD_UNIT_ID  : ca-app-pub-3940256099942544/2247696110 -->
+    <string name="your_native_ad_unit_id" translatable="false">ca-app-pub-3940256099942544/2247696110</string>
+
+    <string name="default_web_client_id">474500944770-5rtlkl54qa4ssbr04ogud1dnd490fcuo.apps.googleusercontent.com</string>
+
+    <string name="app_name">Coins 4u</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="update_profile">Update Profile</string>
+    <string name="anuj_mishra">Anuj  Mishra</string>
+    <string name="love_from_anuj">Made with ❤️ from Anuj</string>
+    <string name="viewpager_description">viewpager_description</string>
+    <string name="sending_otp">sending otp to user number</string>
+    <string name="verification_failed">Verification failed: </string>
+    <string name="settings">settings</string>
+    <string name="player_1_score">Player 1: 0</string>
+    <string name="player_2_score">Player 2: 0</string>
+    <string name="reset">Reset</string>
+    <string name="button_00_desc">Button at position 0,0</string>
+    <string name="button_01_desc">Button at position 0,1</string>
+    <string name="button_02_desc">Button at position 0,2</string>
+    <string name="button_10_desc">Button at position 1,0</string>
+    <string name="button_11_desc">Button at position 1,1</string>
+    <string name="button_12_desc">Button at position 1,2</string>
+    <string name="button_20_desc">Button at position 2,0</string>
+    <string name="button_21_desc">Button at position 2,1</string>
+    <string name="button_22_desc">Button at position 2,2</string>
+    <string name="title_activity_checkout">CheckoutActivity</string>
+    <string name="checkout_item_description">Description</string>
+    <string name="reset_password">Reset password ?</string>
+    <string name="refer_code">Refer Code</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="email_address">Email Address</string>
+    <string name="age">Age</string>
+    <string name="bg4u_user">BG4U USER</string>
+    <string name="current_coins">Current Coins</string>
+    <string name="spin_wheel">Spin Wheel</string>
+    <string name="quiz_icon">Quiz_Icon</string>
+
+    <string name="instructions">Instructions</string>
+    <string name="choose_category">- Chat with friends</string>
+    <string name="play_quiz_or_game">- Play Quiz or Game</string>
+    <string name="collect_coins">- Collect Coins</string>
+    <string name="earn_reward">- Earn Reward</string>
+    <string name="earn_money">- Earn Money</string>
+
+    <string name="home">Home</string>
+    <string name="rank">Rank</string>
+    <string name="wallet">Wallet</string>
+    <string name="profile">Profile</string>
+    <string name="chat">Chat 4U</string>
+
+    <string name="robot_says_hello">robot says hello</string>
+    <string name="login_to_your_account">Login to your account</string>
+    <string name="locationUser">INDIA</string>
+    <string name="bio"> LOVE is the shortest distance between hearts 🌟 💞 ANUJ</string>
+    <string name="or">OR</string>
+    <string name="continue_as_guest">Continue as guest</string>
+    <string name="players">Players</string>
+    <string name="login">Login</string>
+    <string name="signup">Sign up</string>
+    <string name="forgot_password">Forgot password?</string>
+    <string name="sign_in_with_google">Sign in with Google</string>
+    <string name="sign_in_anonymously">Sign in anonymously</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="error_invalid_email">Invalid email address</string>
+    <string name="error_invalid_password">Invalid password</string>
+    <string name="error_unknown">Unknown error occurred</string>
+    <string name="error_enter_email">Please enter an email address</string>
+    <string name="reset_link_sent">Reset password link sent</string>
+    <string name="logging_in">Logging in...</string>
+    <string name="btn_ok">OK</string>
+    <string name="error_title">Error</string>
+    <string name="error_retrieve_user_info">Failed to retrieve user information</string>
+    <string name="error_google_signin_failed">Google sign-in failed</string>
+    <string name="creating_user">Creating user...</string>
+    <string name="setup_profile">Setup Profile</string>
+    <string name="btn_save">Save</string>
+    <string name="profile_name">Name</string>
+    <string name="error_enter_name">Please enter your name</string>
+    <string name="setup_profile_success">Profile setup successful</string>
+    <string name="setup_profile_failed">Failed to set up profile</string>
+    <string name="welcome_message">Welcome to My App!</string>
+    <string name="error_password_required">Please enter a password</string>
+    <string name="coins_4u_user">Coins 4u user</string>
+    <string name="best_apps_4u">Better Apps 4u</string>
+    <string name="jitna_sukh_utna_dukh_jo_aaj_hai_wo_kal_nahi_smile_with_anuj">Jitna Sukh Utna Dukh || Jo Aaj hai wo Kal Nahi - Star Anuj</string>
+    <string name="this_is_back_button">this is back button</string>
+    <string name="next">Next</string>
+    <string name="quit">Quit</string>
+    <string name="quiz_activity">Quiz Activity</string>
+    <string name="question_image">question image</string>
+    <string name="your_score">YOUR SCORE</string>
+    <string name="congratulations">Congratulations!</string>
+    <string name="share">Share</string>
+    <string name="finish">Finish</string>
+    <string name="earned_coins">EARNED COINS</string>
+    <string name="quiz_title">Quiz Title</string>
+    <string name="quiz_category_image">quiz category image</string>
+    <string name="type_a_message">Type a message...</string>
+    <string name="camera_icon">camera icon</string>
+    <string name="send_button">send button</string>
+
+    <string name="demo_title">Download!</string>
+    <string name="demo_des">Do you want to download this file?</string>
+    <string name="demo_negative_text">No</string>
+    <string name="demo_positive_text">Yes</string>
+    <string name="spin_wheel_instruction">- Free Spin Wheel</string>
+    <string name="hello">Hey,</string>
+    <string name="save">Save</string>
+
+    <string name="creating_account">Creating your account. Please wait...</string>
+    <string name="account_created">Account created successfully!</string>
+    <string name="account_creation_failed">Account creation failed!</string>
+    <string name="resend_email">Resend Email</string>
+    <string name="email_verification_failure">Failed to send email verification</string>
+    <string name="invalid_referral_code">Invalid referral code</string>
+    <string name="create_an_account">Create an account</string>
+    <string name="edit_profile" translatable="false">Edit Profile</string>
+    <string name="verify_your_account" translatable="false">Verify your account</string>
+    <string name="hindi" translatable="false">हिंदी</string>
+    <string name="bengali" translatable="false">বাংলা</string>
+    <string name="urdu" translatable="false">উর্দু</string>
+    <string name="english" translatable="false">English</string>
+    <string name="Leaderboard">Leaderboard</string>
+    <string name="my_profile">My Profile</string>
+    <string name="tic_tac_toe">Tic Tac Toe</string>
+    <string name="user_status">User status:</string>
+    <string name="play_and_earn_coins">Play and Earn Coins</string>
+
+    <string name="easy">EASY</string>
+    <string name="medium">MEDIUM</string>
+    <string name="bot_anuj">BOT ANUJ</string>
+    <string name="you">You</string>
+    <string name="vs">VS</string>
+    <string name="level">Level</string>
+    <string name="win_coins">Win Coins</string>
+    <string name="draw_coins">Draw Coins</string>
+    <string name="lose_coins">Lose Coins</string>
+
+    <string name="hard">HARD</string>
+    <string name="lost">lost</string>
+    <string name="won">won</string>
+    <string name="anuj">Anuj</string>
+    <string name="draw">Draw</string>
+    <string name="hard_level">Hard Level</string>
+    <string name="You">You</string>
+
+    <string name="complete_task_redeem_coins" translatable="false">Complete your task and redeem coins</string>
+    <string name="_60_000_coins_required">1,50,000 Coins required</string>
+    <string name="_30_000_coins_required">50,000 coins required</string>
+    <string name="_1_00_000_coins_required_for_mega_win">2,50,000 coins required for mega win</string>
+    <string name="upto_15" translatable="false">Win ₹15</string>
+    <string name="upto_50" translatable="false">Win ₹50</string>
+    <string name="win_upto_100" translatable="false">Win ₹100</string>
+    <string name="email_or_upi_id">Enter email for verification</string>
+
+    <string name="coins">"coins."</string>
+    <string name="you_have">"You have "</string>
+    <string name="spin_left">spin left.</string>
+    <string name="bumper_rewards">Bumper Rewards!</string>
+    <string name="purchase_app">Purchase App</string>
+    <string name="get_this_app_in_just_49">Get this App in just ₹49...</string>
+    <string name="click_back_again_to_exit">Click BACK again to exit</string>
+    <string name="no_internet_connection_available">No internet connection available</string>
+    <string name="update_available">Update Available</string>
+    <string name="update_now">Update Now</string>
+    <string name="cancel">Cancel</string>
+    <string name="payment_successful_you_are_now_a_premium_user">Payment successful! You are now a premium user.</string>
+    <string name="payment_successful_now_you_can_use_this_app">Payment successful. Now, you can use this app.</string>
+    <string name="login_reward">Login Reward</string>
+    <string name="login_daily_and_claim_your">"Login daily and claim your"</string>
+    <string name="claim">Claim</string>
+    <string name="get_more">Get More</string>
+    <string name="Game_over">Game Over</string>
+    <string name="watch_ad">Watch ad!</string>
+
+    <string name="get_1_spin">Get 1 spin</string>
+    <string name="get_3_spin">Get 3 Spin</string>
+    <string name="get_2_spin">Get 2 spin</string>
+
+    <string name="spin_again">Spin Again</string>
+    <string name="quiz">Quiz</string>
+    <string name="result">Result Activity</string>
+    <string name="account_binding">Account Binding</string>
+    <string name="your_account_is_already_binded">Your account is already binded.</string>
+    <string name="logout">Logout</string>
+    <string name="are_you_sure_you_want_to_logout">Are you sure you want to logout?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="email_is_already_verified">Email is already verified.</string>
+    <string name="wins">Wins</string>
+    <string name="Draw">Draw</string>
+    <string name="Lost">Lost</string>
+    <string name="update_your_email">Update your email</string>
+    <string name="from" translatable="false">From</string>
+    <string name="select_language" translatable="false">Select Language</string>
+    <string name="buy_subscription">Buy Subscription</string>
+    <string name="Continue">Continue</string>
+    <string name="watch_Ads">Watch AD</string>
+    <string name="watch_an_ad_to_continue">Watch an ad to continue...</string>
+    <string name="get_premium">Get Premium</string>
+    <string name="request_sent_to">"Request sent to "</string>
+    <string name="send_request">Send Request</string>
+    <string name="cancel_request">Cancel Request</string>
+    <string name="online">Online</string>
+
+    <string name="location">Location</string>
+    <string name="social_media_link">Social media link</string>
+
+    <string name="about_us">About us</string>
+
+    <string name="start_a_game">Start a game</string>
+    <string name="join_a_game">Join a game</string>
+    <string name="tic_tac_toe_friends">Tic-Tac-Toe Friends</string>
+    <string name="share_this_code_with_a_friend_and_ask_to_join_the_game">Share your invite code</string>
+    <string name="waiting_for_your_friend_to_join_the_game">Waiting for your friend to join the game.</string>
+    <string name="enter_code_below_to_join_the_game">Enter code below to join the game</string>
+    <string name="join">join</string>
+    <string name="code">code</string>
+    <string name="aboutMeBody">My name is Anuj Mishra. I am the developer of this Coins 4u Application. I hope you will enjoy using this application</string>
+    <string name="icon_of_tic_tac_toe">Icon of Tic Tac Toe</string>
+    <string name="create_room">Create Room</string>
+    <string name="match_started">Match Started</string>
+    <string name="entry_fees">Entry fees :</string>
+    <string name="paid">paid</string>
+    <string name="match_fee">Match Fees :</string>
+    <string name="friend_profile">Friend Profile</string>
+    <string name="activated">activated</string>
+    <string name="purchase_failed">purchase failed</string>
+    <string name="payment_successful">Payment Successful</string>
+    <string name="you_purchased">You purchased</string>
+    <string name="exit">Exit</string>
+    <string name="shop">Our Shop</string>
+    <string name="easyBot">Bot</string>
+    <string name="proBot">Pro Bot</string>
+    <string name="better_luck_next_time">Better Luck Next Time</string>
+    <string name="buy_later">Buy Later</string>
+    <string name="registration_failed">Registration Failed</string>
+    <string name="unbeatable">Unbeatable</string>
+</resources>

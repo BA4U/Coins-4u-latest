@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.bg4u.coins4u">
+
+        <uses-permission android:name="com.android.vending.BILLING" />
+
+        <uses-permission android:name="android.permission.BLUETOOTH" />
+        <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+        <uses-permission android:name="android.permission.INTERNET" />
+        <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+        <uses-permission android:name="com.google.android.gms.permission.SIGN_IN" />
+        <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+        <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+        <uses-permission android:name="android.permission.VIBRATE" />
+        <uses-permission android:name="android.permission.WAKE_LOCK" />
+        <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+            android:maxSdkVersion="33"
+            tools:ignore="ScopedStorage" />
+        <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"
+            android:maxSdkVersion="33" />
+
+        <application
+            android:name=".MyApplication"
+            android:allowBackup="true"
+            android:sharedUserMaxSdkVersion="32"
+            android:hardwareAccelerated="true"
+            android:icon="@mipmap/ic_launcher"
+            android:label="@string/app_name"
+            android:roundIcon="@mipmap/ic_launcher_round"
+            android:supportsRtl="true"
+            android:theme="@style/AppTheme"
+            android:usesCleartextTraffic="true"
+            tools:targetApi="tiramisu">
+            <activity
+                android:name=".SetupProfileActivity"
+                android:exported="false" />
+
+            <activity
+                android:name=".MainActivity"
+                android:exported="true"
+                android:screenOrientation="portrait"
+                tools:ignore="DiscouragedApi,LockedOrientationActivity" > <!-- Added screenOrientation attribute -->
+                <intent-filter>
+                    <action android:name="android.intent.action.VIEW" />
+                    <category android:name="android.intent.category.DEFAULT" />
+                    <category android:name="android.intent.category.BROWSABLE" />
+                    <!-- Add your http as the data scheme -->
+                    <data android:scheme="https" />
+                </intent-filter>
+            </activity>
+            <activity
+                android:name=".SpinnerActivity"
+                android:screenOrientation="portrait"
+                tools:ignore="DiscouragedApi,LockedOrientationActivity" />
+            <activity android:name=".FreefireActivity"
+                android:exported="true"
+                android:screenOrientation="portrait"
+                tools:ignore="LockedOrientationActivity" />
+            <activity android:name=".TicTacToeActivity"
+                android:screenOrientation="portrait"
+                tools:ignore="LockedOrientationActivity" />
+            <activity android:name=".EasyActivity"
+                android:screenOrientation="portrait" />
+            <activity android:name=".MediumActivity"
+                android:screenOrientation="portrait"  />
+            <activity android:name=".HardActivity"
+                android:screenOrientation="portrait"  />
+            <activity android:name=".UnbeatableActivity"
+                android:screenOrientation="portrait"  />
+            <activity android:name=".ResultActivity"
+                android:screenOrientation="portrait" />
+            <activity android:name=".QuizActivity"
+                android:screenOrientation="portrait" />
+            <activity android:name=".SignupActivity"
+                android:screenOrientation="portrait"  /> <!-- SplashActivity as the launcher activity -->
+            <activity android:name=".LoginActivity"
+                android:screenOrientation="portrait"  />
+            <activity android:name=".SubscriptionActivity"
+                android:screenOrientation="portrait"  />
+<!--            <activity android:name=".ShopActivity"-->
+<!--                android:screenOrientation="portrait"  />-->
+            <activity android:name=".TicTacToeOnline.MainActivity"
+                android:screenOrientation="portrait"  />
+            <activity android:name=".TicTacToeOnline.GameActivity"
+                android:screenOrientation="portrait"  />
+            <activity android:name=".TicTacToeOnline.JoinActivity"
+                android:screenOrientation="portrait" />
+            <activity android:name=".TicTacToeOnline.StartActivity"
+                android:screenOrientation="portrait" />
+            <activity android:name=".TicTacToeOnline.FiveOnlineActivity"
+                android:screenOrientation="portrait" />
+            <activity
+                android:name=".AboutMeActivity"
+                android:exported="true"
+                android:screenOrientation="portrait"
+                />
+            <activity
+                android:name=".PaymentActivity"
+                android:label="Payment Activity"
+                android:exported="true"
+                android:screenOrientation="portrait" >
+                <!-- Add the following intent filter to handle UPI payment intents -->
+                <intent-filter>
+                    <action android:name="android.intent.action.VIEW" />
+                    <category android:name="android.intent.category.DEFAULT" />
+                    <category android:name="android.intent.category.BROWSABLE" />
+                    <!-- Add your UPI ID as the data scheme -->
+                    <data android:scheme="upi" />
+                </intent-filter>
+            </activity>
+            <activity
+                android:name=".SplashActivity"
+                android:exported="true"
+                android:screenOrientation="portrait" >
+                <intent-filter>
+                    <action android:name="android.intent.action.MAIN" />
+                    <category android:name="android.intent.category.LAUNCHER" />
+                </intent-filter>
+            </activity>
+
+        <!-- Chat Activities -->
+        <activity
+            android:name=".chat.MainActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"  />
+
+        <!-- Other activities -->
+        <activity android:name=".chat.ImageViewActivity"
+            android:screenOrientation="portrait"  />
+        <activity
+            android:name=".chat.ChatActivity"
+            android:parentActivityName=".chat.MainActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".chat.ProfileActivity"
+            android:screenOrientation="portrait"  />
+        <activity
+            android:name=".chat4u.MainActivity"
+            android:parentActivityName=".chat.MainActivity"
+            android:screenOrientation="portrait"  />
+        <activity
+            android:name=".chat4u.ChatActivity"
+            android:parentActivityName=".chat.MainActivity"
+            android:screenOrientation="portrait"  />
+
+        <!-- Razorpay API key code here -->
+        <meta-data
+            android:name="com.razorpay.ApiKey"
+            android:value="rzp_live_uKNNoFARuXPBva" />
+        <meta-data
+            android:name="com.google.android.gms.wallet.api.enabled"
+            android:value="true" />
+
+        <!-- Sample AdMob app ID: ca-app-pub-3940256099942544~3347511713 -->
+        <!-- Coins 4u AdMob app ID: ca-app-pub-9194745865715560~1044336356 -->
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-9194745865715560~1044336356"/>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+        <!--
+ Set custom default icon. This is used when no icon is set for incoming notification messages.
+     See README(https://goo.gl/l4GJaQ) for more.
+        -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/notification_coins_app_logo" />
+        <!--
+ Set color used with incoming notification messages. This is used when no color is set for the incoming
+             notification message. See README(https://goo.gl/6BKBk7) for more.
+        -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/logoColor" />
+
+        <meta-data
+            android:name="com.google.android.gms.ads.flag.OPTIMIZE_INITIALIZATION"
+            android:value="true"/>
+
+        <meta-data
+            android:name="com.google.android.gms.ads.flag.OPTIMIZE_AD_LOADING"
+            android:value="true"/>
+
+        <!-- File Provider for accessing app's files -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <!-- Firebase Messaging Service -->
+        <service android:name=".FCMNotificationService" android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+
+            <service
+                android:name=".chat4u.MyFirebaseMessagingService"
+                android:exported="false">
+                <intent-filter>
+                    <action android:name="com.google.firebase.MESSAGING_EVENT" />
+                </intent-filter>
+            </service>
+
+
+        </application>
+
+</manifest>

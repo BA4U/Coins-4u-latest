@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="menu_item_delete_chat" type="id" />
+    <item name="linear_one" type="id" />
+    <item name="one" type="id" />
+    <item name="flagView_english" type="id" />
+    <item name="tick_english" type="id" />
+</resources>

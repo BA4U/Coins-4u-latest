@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_grey"
+    tools:context="com.bg4u.coins4u.TicTacToeOnline.StartActivity">
+
+    <!-- Header View -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:fontFamily="@font/aclonica"
+        android:text="@string/join_a_game"
+        android:textColor="@color/colorBlue"
+        android:textSize="36sp"
+        android:gravity="center"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/my_toolbar" />
+
+
+    <!-- Logo Image -->
+    <ImageView
+        android:id="@+id/logoTicTicToe"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:contentDescription="Icon of Tic Tac Toe"
+        android:src="@drawable/tictactoe2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.15"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title"
+        app:layout_constraintWidth_percent="0.25" />
+
+    <!-- User Image -->
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/player1Pic"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="Icon of Tic Tac Toe"
+        android:src="@drawable/easy_bot"
+        app:civ_border_color="@color/yellow"
+        app:civ_border_width="4dp"
+        app:layout_constraintBottom_toBottomOf="@+id/logoTicTicToe"
+        app:layout_constraintEnd_toStartOf="@id/logoTicTicToe"
+        app:layout_constraintHeight_percent="0.12"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/logoTicTicToe"
+        app:layout_constraintWidth_percent="0.20" />
+
+    <!-- Avatar Image -->
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/player2Pic"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="Icon of Tic Tac Toe"
+        android:src="@drawable/hard_bot"
+        app:civ_border_color="@color/colorWhite"
+        app:civ_border_width="4dp"
+        app:layout_constraintBottom_toBottomOf="@+id/logoTicTicToe"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.12"
+        app:layout_constraintStart_toEndOf="@id/logoTicTicToe"
+        app:layout_constraintTop_toTopOf="@+id/logoTicTicToe"
+        app:layout_constraintWidth_percent="0.20" />
+
+    <!-- "VS" TextView -->
+    <ProgressBar
+        android:id="@+id/progressBar4"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleX="2"
+        android:scaleY="2"
+        android:indeterminate="true"
+        android:indeterminateTint="@color/colorPrimary"
+        app:layout_constraintBottom_toBottomOf="@+id/logoTicTicToe"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.12"
+        app:layout_constraintStart_toEndOf="@id/logoTicTicToe"
+        app:layout_constraintTop_toTopOf="@+id/logoTicTicToe"
+        app:layout_constraintWidth_percent="0.20" />
+
+    <TextView
+        android:id="@+id/turn_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/gray_scale"
+        android:fontFamily="@font/aclonica"
+        android:paddingHorizontal="15dp"
+        android:layout_marginBottom="20dp"
+        android:text="@string/vs"
+        android:textColor="@color/RED"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/logoTicTicToe" />
+
+    <!-- "You" TextView -->
+    <TextView
+        android:id="@+id/player1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:ellipsize="marquee"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:fontFamily="@font/aclonica"
+        android:gravity="center"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:maxLines="1"
+        android:scrollHorizontally="true"
+        android:text="You"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/logoTicTicToe"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/player1Pic"
+        app:layout_wrapBehaviorInParent="horizontal_only" />
+
+    <!-- "You" TextView -->
+
+    <!-- "player2" TextView -->
+    <TextView
+        android:id="@+id/player2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:ellipsize="marquee"
+        android:fontFamily="@font/aclonica"
+        android:gravity="center"
+        android:maxLines="1"
+        android:text="Friends"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/logoTicTicToe"
+        app:layout_constraintTop_toBottomOf="@+id/player2Pic" />
+
+    <!-- "player2" TextView -->
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginVertical="10dp"
+        app:cardCornerRadius="10dp"
+        android:elevation="5dp"
+        app:cardBackgroundColor="@color/colorPrimary"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/turn_text">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:padding="5dp"
+            android:layout_margin="10dp"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/enteredCode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="60dp"
+                android:background="@drawable/edit_text_rounded_corner"
+                android:elevation="2dp"
+                android:padding="5dp"
+                android:fontFamily="@font/roboto_bold"
+                android:gravity="center"
+                android:hint="Code"
+                android:inputType="numberSigned"
+                android:textColor="@color/colorPrimary"
+                android:textColorHint="@color/light_grey"
+                android:textSize="48sp" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_bold"
+                android:padding="10dp"
+                android:text="Enter your friend code"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent" />
+
+            <Button
+                android:id="@+id/submitCode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_2"
+                android:text="@string/join"
+                android:textColor="@color/colorWhite"
+                android:textSize="20sp"
+                android:padding="5dp"
+                app:layout_constraintBottom_toTopOf="@+id/mediumButton"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/onlineTicTacToeMatchList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="5dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/flag_transparent"
+        android:isScrollContainer="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView"
+        tools:listitem="@layout/item_matchmaking" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

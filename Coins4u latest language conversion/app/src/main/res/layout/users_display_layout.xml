@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_user"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="4dp"
+    android:clickable="true"
+    android:foreground="?android:attr/selectableItemBackground"
+    app:cardCornerRadius="10dp"
+    android:elevation="5dp"
+    android:focusable="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="10dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/users_profile_image"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginVertical="10dp"
+            android:padding="2dp"
+            android:contentDescription="@string/coins_4u_user"
+            android:src="@drawable/user_icon_default" />
+
+        <ImageView
+            android:id="@+id/users_online_status"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:contentDescription="TODO"
+            android:visibility="invisible"
+            android:layout_alignEnd="@id/users_profile_image"
+            android:layout_alignBottom="@id/users_profile_image"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="5dp"
+            android:src="@drawable/online" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_toEndOf="@id/users_profile_image"
+            android:layout_marginTop="15dp">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/users_profile_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_bold"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:text="@string/coins_4u_user"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="10:00"
+                    android:textSize="14sp"
+                    android:visibility="invisible"
+                    android:gravity="center_vertical"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="10dp"
+                    android:id="@+id/last_message_time"/>
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/users_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_medium"
+                android:maxLines="1"
+                android:text="last message"
+                android:textColor="@color/black" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_below="@id/users_profile_image">
+
+            <Button
+                android:id="@+id/request_accept_button"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginBottom="5dp"
+                android:visibility="gone"
+                android:textColor="@color/white"
+                android:background="@drawable/button_2"
+                android:contentDescription="@string/request_sent_to"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/request_cancel_button"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginBottom="5dp"
+                android:visibility="gone"
+                android:textColor="@color/white"
+                android:background="@drawable/button_1"
+                android:contentDescription="@string/cancel_request"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

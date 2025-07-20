@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".AboutMeActivity">
+
+    <!-- Header View -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+    <!-- Existing views -->
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="2dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/my_toolbar">
+
+        <!-- User Profile Image and avatar animation layout -->
+        <RelativeLayout
+            android:id="@+id/profileLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <!-- User Profile Image -->
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profileImage"
+                android:layout_width="104dp"
+                android:layout_height="104dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:elevation="2dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/coinlogowithtext_4u" />
+
+            <!-- Premium Icon (Only visible for premium members) -->
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/premiumAvatar"
+                android:layout_width="wrap_content"
+                android:layout_height="180dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:scaleType="centerInside"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+                app:lottie_enableMergePathsForKitKatAndAbove="true"
+                app:lottie_rawRes="@raw/premium_avatar_animation" />
+        </RelativeLayout>
+
+        <!-- User Name -->
+        <TextView
+            android:id="@+id/aboutMeTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/profileLayout"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/roboto_bold"
+            android:text="@string/app_name"
+            android:textColor="@color/color_white"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <!-- Premium Icon -->
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/premiumIcon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignTop="@id/aboutMeTitle"
+            android:layout_alignBottom="@id/aboutMeTitle"
+            android:layout_toEndOf="@id/aboutMeTitle"
+            android:gravity="center"
+            android:scaleType="centerInside"
+            android:visibility="gone"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_enableMergePathsForKitKatAndAbove="true"
+            app:lottie_rawRes="@raw/premium_gold_icon" />
+
+        <!-- User bio -->
+        <TextView
+            android:id="@+id/aboutMeBody"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/aboutMeTitle"
+            android:layout_centerHorizontal="true"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="10dp"
+            android:padding="10dp"
+            android:background="@drawable/edit_text_rounded_corner"
+            android:backgroundTint="@color/colorPrimaryLight"
+            android:gravity="center"
+            android:text="@string/aboutMeBody"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textColorHighlight="#FFCA11"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:lineSpacingExtra="8dp"
+            app:autoSizeTextType="uniform" />
+
+    </RelativeLayout>
+
+    <!-- Scrollable Content -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:contentDescription="@string/about_us"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout">
+
+        <!-- Content Inside ScrollView -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:padding="2dp">
+
+            <!-- Premium Icon (Only visible for premium members) -->
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/donateBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:contentDescription="@string/aboutMeBody"
+                android:focusable="true"
+                android:gravity="center"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+                app:lottie_rawRes="@raw/donate_animation" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/appShareBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/button_4"
+        android:maxWidth="140dp"
+        android:text="Share and earn Coins"
+        android:textColor="@color/color_white"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@id/ratingBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <RatingBar
+        android:id="@+id/ratingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:numStars="5"
+        android:visibility="gone"
+        android:progressTint="@color/yellow"
+        android:rating="5"
+        android:stepSize="0.5"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintBottom_toTopOf="@id/rateText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/rateText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_light"
+        android:text="Rate this app on Play Store "
+        android:textAlignment="center"
+        android:visibility="gone"
+        android:textColor="@color/colorWhite"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

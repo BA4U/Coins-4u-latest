@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context="com.bg4u.coins4u.SetupProfileActivity">
+
+    <!-- Header View -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+    <TextView
+        android:id="@+id/saveProfileBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="@string/save"
+        android:textColor="@color/colorWhite"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:foreground="?android:selectableItemBackground"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <!-- User Profile Image -->
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imageView"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/user_icon_default"
+            app:civ_border_color="@color/white"
+            app:civ_border_width="4dp" />
+
+        <!-- User Name -->
+        <EditText
+            android:id="@+id/nameBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imageView"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="10dp"
+            android:autofillHints="name"
+            android:fontFamily="@font/roboto_bold"
+            android:gravity="center_horizontal"
+            android:hint="@string/coins_4u_user"
+            android:inputType="textPersonName"
+            android:paddingHorizontal="15dp"
+            android:textColor="@color/color_white"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <!-- User bio -->
+        <EditText
+            android:id="@+id/bio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/nameBox"
+            android:layout_marginHorizontal="8dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/edit_text_rounded_corner"
+            android:backgroundTint="@color/colorWhite"
+            android:fontFamily="@font/roboto_medium"
+            android:gravity="center"
+            android:hint="@string/bio"
+            android:maxLines="2"
+            android:paddingHorizontal="30dp"
+            android:paddingVertical="15dp"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:textStyle="bold|italic" />
+
+        <!-- User Details -->
+        <LinearLayout
+            android:id="@+id/user_details_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/bio"
+            android:layout_marginTop="8dp"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <!-- location -->
+            <EditText
+                android:id="@+id/locationBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/edit_text_rounded_corner"
+                app:drawableEndCompat="@drawable/edit"
+                android:drawableTint="@color/colorPurple"
+                android:drawablePadding="15dp"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                android:inputType="textPersonName"
+                android:padding="15dp"
+                android:elevation="10dp"
+                android:hint="@string/location"
+                app:drawableStartCompat="@drawable/location"/>
+
+            <!-- Phone Number -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:elevation="10dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_weight="5">
+
+                    <com.hbb20.CountryCodePicker
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:minHeight="48dp"
+                        app:ccp_showFlag="true"
+                        app:ccp_showNameCode="false"
+                        android:id="@+id/login_countrycode"/>
+
+                    <EditText
+                        android:id="@+id/phoneNumberBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:gravity="center"
+                        android:background="@drawable/edit_text_rounded_corner"
+                        android:elevation="5dp"
+                        android:hint="Mobile"
+                        app:drawableEndCompat="@drawable/edit"
+                        app:drawableTint="@color/colorPurple"
+                        android:inputType="phone"
+                        android:minHeight="48dp"
+                        android:padding="10dp" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <!-- Age -->
+            <EditText
+                android:id="@+id/ageBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/edit_text_rounded_corner"
+                app:drawableEndCompat="@drawable/edit"
+                android:drawableTint="@color/colorPurple"
+                android:drawablePadding="15dp"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                android:inputType="number"
+                android:padding="15dp"
+                android:elevation="10dp"
+                android:hint="@string/age"
+                app:drawableStartCompat="@drawable/age_group"/>
+
+            <!-- social media -->
+            <EditText
+                android:id="@+id/socialMediaLinkBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/edit_text_rounded_corner"
+                app:drawableEndCompat="@drawable/edit"
+                android:drawableTint="@color/colorPurple"
+                android:drawablePadding="15dp"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                android:inputType="textPersonName"
+                android:padding="15dp"
+                android:elevation="10dp"
+                android:hint="@string/social_media_link"
+                app:drawableStartCompat="@drawable/instagram"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/user_details_layout"
+            android:orientation="horizontal"
+            android:padding="8dp">
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

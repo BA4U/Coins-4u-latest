@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- Number of Coins -->
+<!--    <item android:id="@+id/spinner"
+        android:title="@string/edit_profile"
+        android:icon="@drawable/languages"
+        app:showAsAction="ifRoom"/>-->
+
+    <!-- Chat -->
+    <item android:id="@+id/chat"
+        android:title="@string/chat"
+        android:icon="@drawable/about"
+        app:showAsAction="withText"/>
+    <!-- shop -->
+<!--    <item android:id="@+id/shop"-->
+<!--        android:title="@string/shop"-->
+<!--        android:icon="@drawable/about"-->
+<!--        app:showAsAction="withText"/>-->
+    <!-- subscription -->
+    <item android:id="@+id/subscription"
+        android:title="@string/buy_subscription"
+        android:icon="@drawable/about"
+        app:showAsAction="withText"/>
+
+    <!-- About me -->
+    <item android:id="@+id/about"
+        android:title="@string/about_us"
+        android:icon="@drawable/about"
+        app:showAsAction="withText"/>
+</menu>

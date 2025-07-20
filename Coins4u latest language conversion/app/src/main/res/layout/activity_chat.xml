@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/bg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".chat.ChatActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/main_app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPurple"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/backBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:minWidth="48dp"
+                android:padding="15dp"
+                android:layout_gravity="center"
+                android:foreground="?android:selectableItemBackgroundBorderless"
+                android:contentDescription="@string/this_is_back_button"
+                app:srcCompat="@drawable/ic_left_arrow"
+                app:tint="@color/white" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/custom_profile_image"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                app:civ_border_color="@color/colorWhite"
+                app:civ_border_width="4dp"
+                android:layout_marginVertical="5dp"
+                android:src="@drawable/user_icon_default" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_gravity="center_vertical"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/custom_profile_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="@string/coins_4u_user"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/custom_user_last_seen"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="@string/online"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/private_message_list_of_users"
+        android:layout_below="@id/main_app_bar"
+        android:layout_above="@id/chat_linear_layout"
+        android:layout_marginBottom="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:listitem="@layout/custom_messages_layout"/>
+
+    <RelativeLayout
+        android:id="@+id/chat_linear_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:layout_alignParentStart="true">
+
+        <ImageButton
+            android:id="@+id/send_files_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/cardView"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="2dp"
+            android:background="@drawable/circle_bg"
+            android:contentDescription="@string/chat"
+            android:minWidth="48dp"
+            android:minHeight="48dp"
+            android:padding="10dp"
+            android:src="@drawable/ic_attachment" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
+            android:layout_width="0dp"
+            android:minHeight="48dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="5dp"
+            app:cardCornerRadius="30dp"
+            android:layout_toEndOf="@id/send_files_btn"
+            android:layout_toStartOf="@id/send_message_btn">
+
+            <EditText
+                android:id="@+id/input_messages"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toStartOf="@id/send_message_btn"
+                android:layout_toEndOf="@id/send_files_btn"
+                android:background="@android:color/transparent"
+                android:focusable="true"
+                android:fontFamily="@font/roboto_bold"
+                android:hint="Type a message"
+                android:minHeight="48dp"
+                android:paddingHorizontal="15dp"
+                android:paddingVertical="10dp"
+                android:textSize="16sp"
+                android:importantForAutofill="no" />
+        </androidx.cardview.widget.CardView>
+
+        <ImageButton
+            android:id="@+id/send_message_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/cardView"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="2dp"
+            android:background="@drawable/circle_blue"
+            android:contentDescription="@string/app_name"
+            android:minWidth="48dp"
+            android:minHeight="48dp"
+            android:padding="10dp"
+            android:src="@drawable/ic_send"
+            app:srcCompat="@drawable/ic_send"
+            app:tint="@color/white">
+
+        </ImageButton>
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,463 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_grey"
+    android:orientation="vertical">
+
+    <!-- Header View -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+    <!-- Scrollable Content -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <!-- Content Inside ScrollView -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="3"
+            android:orientation="vertical">
+
+            <!-- Premium Plan 1 -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardViewPremium1"
+                android:layout_width="match_parent"
+                android:layout_height="215dp"
+                android:layout_marginHorizontal="5dp"
+                android:layout_marginTop="10dp"
+                android:elevation="5dp"
+                app:cardCornerRadius="15dp">
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/animationViewBanner1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:scaleType="centerCrop"
+                    app:lottie_autoPlay="true"
+                    app:lottie_enableMergePathsForKitKatAndAbove="true"
+                    app:lottie_loop="true"
+                    app:lottie_rawRes="@raw/basic_banner_animation" />
+
+                <!-- Content of Premium Plan 1 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:weightSum="1"
+                    android:paddingHorizontal="10dp"
+                    android:paddingBottom="10dp">
+
+                    <!-- Premium Plan Title -->
+                    <TextView
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/background_bottom"
+                        android:gravity="center"
+                        android:padding="15dp"
+                        android:text="Basic"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <!-- Premium Plan Features -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:drawablePadding="10dp"
+                        android:gravity="center"
+                        android:text="Get 1.5x coins and 100 coins daily"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        app:drawableStartCompat="@drawable/green_tick" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:drawablePadding="10dp"
+                        android:text="Basic avatar and banner"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        app:drawableStartCompat="@drawable/green_tick" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:drawablePadding="10dp"
+                        android:text="Chat with other users"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        app:drawableStartCompat="@drawable/green_tick" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:drawablePadding="10dp"
+                        android:text="Ad-free experience"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        app:drawableStartCompat="@drawable/cross_check" />
+
+                    <!-- Premium Plan Price and Button -->
+                    <Button
+                        android:id="@+id/btnBasic"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/button_1"
+                        android:minHeight="48dp"
+                        android:paddingStart="24dp"
+                        android:paddingTop="8dp"
+                        android:paddingEnd="24dp"
+                        android:paddingBottom="8dp"
+                        android:text="₹ 29 / week"
+                        android:textColor="@color/colorWhite" />
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <!-- Premium Plan 2 -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardViewPremium2"
+                android:layout_width="match_parent"
+                android:layout_height="215dp"
+                android:layout_marginHorizontal="5dp"
+                android:layout_marginTop="10dp"
+                android:elevation="5dp"
+                app:cardCornerRadius="15dp">
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/animationViewBanner2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:scaleType="centerCrop"
+                    app:lottie_autoPlay="true"
+                    app:lottie_enableMergePathsForKitKatAndAbove="true"
+                    app:lottie_loop="true"
+                    app:lottie_rawRes="@raw/standard_banner_animation" />
+
+                <!-- Content of Premium Plan 2 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:weightSum="1"
+                    android:paddingHorizontal="10dp"
+                    android:paddingBottom="10dp">
+
+                    <!-- Premium Plan Title -->
+                    <TextView
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/background_bottom"
+                        android:gravity="center"
+                        android:padding="15dp"
+                        android:text="Standard"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <!-- Premium Plan Features -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:drawablePadding="10dp"
+                        android:text="Get 1.5x coins and 200 coins daily"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        app:drawableStartCompat="@drawable/green_tick" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:drawablePadding="10dp"
+                        android:text="Standard avatar and banner"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        app:drawableStartCompat="@drawable/green_tick" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:drawablePadding="10dp"
+                        android:text="Chat with other users"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        app:drawableStartCompat="@drawable/green_tick" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:drawablePadding="10dp"
+                        android:text="Ad-free experience"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        app:drawableStartCompat="@drawable/cross_check" />
+
+                    <!-- Premium Plan Price and Button -->
+                    <Button
+                        android:id="@+id/btnStandard"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/button_1"
+                        android:minHeight="48dp"
+                        android:paddingStart="24dp"
+                        android:paddingTop="8dp"
+                        android:paddingEnd="24dp"
+                        android:paddingBottom="8dp"
+                        android:text="₹ 99 / MONTH"
+                        android:textColor="@color/colorWhite" />
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <!-- Premium Plan 3 -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardViewPremium3"
+                android:layout_width="match_parent"
+                android:layout_height="215dp"
+                android:layout_marginHorizontal="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:elevation="5dp"
+                app:cardCornerRadius="15dp">
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/animationViewBanner3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:scaleType="centerCrop"
+                    app:lottie_autoPlay="true"
+                    app:lottie_enableMergePathsForKitKatAndAbove="true"
+                    app:lottie_loop="true"
+                    app:lottie_rawRes="@raw/premium_banner_animation" />
+
+                <!-- Content of Premium Plan 3 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:weightSum="1"
+                    android:paddingHorizontal="10dp"
+                    android:paddingBottom="10dp">
+
+                    <!-- Premium Plan Title -->
+                    <TextView
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/background_bottom"
+                        android:gravity="center"
+                        android:padding="15dp"
+                        android:text="Premium"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <!-- Premium Plan Features -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:drawablePadding="10dp"
+                        android:text="Get 2x coins and 500 coins daily"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        app:drawableStartCompat="@drawable/green_tick" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:drawablePadding="10dp"
+                        android:text="Premium avatar and banner"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        app:drawableStartCompat="@drawable/green_tick" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:drawablePadding="10dp"
+                        android:text="Chat with other users"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        app:drawableStartCompat="@drawable/green_tick" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:drawablePadding="10dp"
+                        android:text="Ad-free experience"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        app:drawableStartCompat="@drawable/green_tick" />
+
+                    <!-- Premium Plan Price and Button -->
+                    <Button
+                        android:id="@+id/btnPremium"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/button_1"
+                        android:minHeight="48dp"
+                        android:paddingStart="24dp"
+                        android:paddingTop="8dp"
+                        android:paddingEnd="24dp"
+                        android:paddingBottom="8dp"
+                        android:text="₹ 159 / MONTH"
+                        android:textColor="@color/colorWhite" />
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/redeem50PlayPoints"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="5dp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cardViewMegaWin">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/logo_1"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_gravity="center"
+                        android:layout_margin="10dp"
+                        android:src="@drawable/google_play_point_logo"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"/>
+
+
+                    <LinearLayout
+                        android:id="@+id/textLinearLayout1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="5dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/btnRedeem"
+                        app:layout_constraintStart_toEndOf="@+id/logo_1"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <TextView
+                            android:id="@+id/title1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:text="Get Google Play Points"
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            app:layout_constraintStart_toEndOf="@+id/logo_1"
+                            app:layout_constraintTop_toTopOf="@+id/logo_1" />
+
+                        <TextView
+                            android:id="@+id/subtitle1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="2dp"
+                            android:text="Copy and redeem your code"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            app:layout_constraintStart_toEndOf="@+id/logo_1"
+                            app:layout_constraintTop_toBottomOf="@+id/title1" />
+
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/btnRedeem"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp"
+                        android:background="@drawable/button_2"
+                        android:text="Claim"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
